@@ -95,9 +95,14 @@ public class Battle {
      //Aqui encontramos que si en algun caso nuestro usuario tira en la fila
      //Indicada se imprimira un mensaje diciendole que su tiro esta bien
      //Esto es solamente para indicar que los buques estan en esa area
+     // Al final se le coloco un mensaje automatico, que si nuestro usuario no ingresa ninguno
+     // de los casos que diga que su disparo cayo en el Agua. 
+       
     //Buque 1: Ubicacion
-              
-             
+     int buques =0; 
+     switch (buques)
+     {
+         case 1:   
            if (fila==2 && col ==0)
            {
            System.out.println("                                             ");    
@@ -105,8 +110,10 @@ public class Battle {
            System.out.print ("El disparo cayo en BUQUE!");
            System.out.println("                                             ");    
            System.out.println("                                             ");    
-           } 
-
+           } break; 
+           
+           
+         case 2: 
           if (fila==2 && col ==1)
            {
            System.out.println("                                             ");    
@@ -114,9 +121,11 @@ public class Battle {
            System.out.print ("El disparo cayo en BUQUE!");
            System.out.println("                                             ");    
            System.out.println("                                             ");    
-           } 
+           } break; 
          
-    //Buque 2: Ubicacion       
+    //Buque 2: Ubicacion   
+           
+         case 3:
            if (fila==5 && col ==6)
            {
            System.out.println("                                             ");    
@@ -124,8 +133,10 @@ public class Battle {
            System.out.print ("El disparo cayo en BUQUE!");
            System.out.println("                                             ");    
            System.out.println("                                             ");    
-           } 
-              
+           } break; 
+           
+           
+         case 4:    
            if (fila==5 && col ==7)
            {
            System.out.println("                                             ");    
@@ -134,11 +145,18 @@ public class Battle {
            System.out.println("                                             ");    
            System.out.println("                                             "); 
            
-           }      
-            
-           
-           
-           
+           } break;
+             
+         default:  
+                 {
+             System.out.println("                                             ");    
+           System.out.println("                                             ");    
+           System.out.print ("El disparo cayo en AGUA!");
+           System.out.println("                                             ");    
+           System.out.println("                                             "); 
+         }
+     }
+         
  } 
  
 
